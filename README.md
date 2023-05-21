@@ -1,10 +1,12 @@
-## Minimalistic refind theme
+## rEFInd Minimalistic Theme
 
 [rEFInd](http://www.rodsbooks.com/refind/) is an easy to use boot manager for UEFI
 based systems. This is a clean and minimal theme for it.
 
-This theme is a combination of [rEFInd-minimal](https://github.com/EvanPurkhiser/rEFInd-minimal) and [refind-dreary](https://github.com/dheishman/refind-dreary)
-![refind-theme](https://raw.githubusercontent.com/kvnbias/refind-theme/master/screenshot.jpg)
+NOTE: This theme is forked and modified version of [refind-theme](https://github.com/kvnbias/refind-theme) by [kvnbias](https://github.com/kvnbias)
+
+The orginal theme was  a combination of [rEFInd-minimal](https://github.com/EvanPurkhiser/rEFInd-minimal) and [refind-dreary](https://github.com/dheishman/refind-dreary)
+![refind-theme](https://raw.githubusercontent.com/iammrmehedi/Awesome-rEFInd/main/screenshot.jpg)
 
 ### Usage
 
@@ -16,28 +18,22 @@ This theme is a combination of [rEFInd-minimal](https://github.com/EvanPurkhiser
 
  3. Clone this repository into the `themes` directory.
 
- 4. To enable the theme add `include themes/refind-theme/theme.conf` at the end of
+ 4. To enable the theme add `include themes/rEFInd-Minimalistic-Theme/theme.conf` at the end of
     `refind.conf`.
 
 Here's an example menuentry configuration (from the screenshot)
 
 ```
-menuentry "Arch Linux" {
-    icon /EFI/refind/themes/refind-theme/icons/os_arch.png
-    loader vmlinuz-linux
-    initrd initramfs-linux.img
-    options "rw root=UUID=dfb2919d-ff78-48db-a8a7-23f7542c343a"
+menuentry "Windows 11 Pro" {
+	icon \EFI\refind\themes\rEFInd-Minimalistic-Theme\icons\os_win11.png
+    	loader \EFI\Microsoft\Boot\bootmgfw.efi
 }
-
-menuentry "Windows" {
-    icon /EFI/refind/themes/refind-theme/icons/os_win.png
-    loader /EFI/Microsoft/Boot/bootmgfw.efi
-}
-
-menuentry "macOS" {
-    icon     /EFI/refind/themes/rEFInd-minimal/icons/os_mac.png
-    volume   "Samsung SSD 850 EVO 500GB"
-    loader   \System\Library\CoreServices\boot.efi
+menuentry "Debian" {
+    icon /EFI/refind/themes/rEFInd-Minimalistic-Theme/icons/os_debian.png
+    volume 53f60ca1-c118-4885-b66b-3f29039e5a43
+    loader /boot/vmlinuz-6.1.0-9-amd64
+    initrd /boot/initrd.img-6.1.0-9-amd64
+    options "root=UUID=60ebb4c2-e9e3-4ba4-a0a8-f662d51d8b4d ro quiet nomodeset mitigations=off "
 }
 ```
 
