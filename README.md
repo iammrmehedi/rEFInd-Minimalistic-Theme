@@ -1,14 +1,14 @@
-## rEFInd Minimalistic Theme
+# rEFInd Minimalistic Theme
 
 [rEFInd](http://www.rodsbooks.com/refind/) is an easy to use boot manager for UEFI
 based systems. This is a clean and minimal theme for it.
 
 NOTE: This theme is forked and modified version of [refind-theme](https://github.com/kvnbias/refind-theme) by [kvnbias](https://github.com/kvnbias)
 
-The orginal theme was  a combination of [rEFInd-minimal](https://github.com/EvanPurkhiser/rEFInd-minimal) and [refind-dreary](https://github.com/dheishman/refind-dreary)
-![rEFInd-Minimalistic-Theme](https://github.com/iammrmehedi/rEFInd-Minimalistic-Theme/blob/main/screenshot.webp)
+The original theme was  a combination of [rEFInd-minimal](https://github.com/EvanPurkhiser/rEFInd-minimal) and [refind-dreary](https://github.com/dheishman/refind-dreary)
+![rEFInd-Minimalistic-Theme](https://raw.githubusercontent.com/iammrmehedi/rEFInd-Minimalistic-Theme/main/screenshot.webp)
 
-### Usage
+## Usage
 
  1. Locate your refind EFI directory. This is commonly `/boot/EFI/refind`
     though it will depend on where you mount your ESP and where rEFInd is
@@ -23,10 +23,10 @@ The orginal theme was  a combination of [rEFInd-minimal](https://github.com/Evan
 
 Here's an example menuentry configuration (from the screenshot)
 
-```
+```text
 menuentry "Windows 11 Pro" {
-	icon \EFI\refind\themes\rEFInd-Minimalistic-Theme\icons\os_win11.png
-    	loader \EFI\Microsoft\Boot\bootmgfw.efi
+ icon \EFI\refind\themes\rEFInd-Minimalistic-Theme\icons\os_win11.png
+     loader \EFI\Microsoft\Boot\bootmgfw.efi
 }
 menuentry "Debian" {
     icon /EFI/refind/themes/rEFInd-Minimalistic-Theme/icons/os_debian.png
@@ -39,7 +39,7 @@ menuentry "Debian" {
 
 Entries that are autodetected should also show the proper icons.
 
-### Background sizes
+## Background sizes
 
 If you find the background looks blurry it may be due to the included wallpaper
 being an incorrect resolution for your monitor. You can download the [original
@@ -48,7 +48,7 @@ high quality wallpaper][wallpaper], resize it as appropriate, and replace the
 
 You can of course also choose your own background!
 
-### Attribution
+## Attribution
 
 The OS icons are from [Lightness for burg][icons] by [SWOriginal][icon-author].
 
